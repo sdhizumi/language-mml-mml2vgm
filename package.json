@@ -1,0 +1,52 @@
+{
+	"name": "mml2vgm-mml",
+	"displayName": "mml2vgm mml",
+	"description": "mml2vgm mml (.gwi)",
+	"version": "1.0.0",
+	"publisher": "sdhizumi",
+	"icon": "icon.png",
+	"engines": {
+		"vscode": "^1.34.0"
+	},
+	"categories": [
+		"Programming Languages",
+		"Snippets"
+	],
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "mml2vgm",
+				"aliases": [
+					"mml2vgm",
+					"mml2vgm"
+				],
+				"extensions": [
+					"gwi"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"snippets": [
+			{
+				"language": "mml2vgm",
+				"path": "./snippets/mml2vgm.snippets.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "mml2vgm",
+				"scopeName": "source.mml2vgm",
+				"path": "./syntaxes/mml2vgm.tmLanguage.json"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "74ee3a61-fc53-4e8c-b334-821f991bee06",
+		"publisherDisplayName": "sdhizumi",
+		"publisherId": "22bd5781-c64d-4644-9064-6c0c9a6ae23d"
+	}
+}

@@ -1,0 +1,139 @@
+{
+    "FM Template":
+    {
+        "prefix": "'@ F",
+        "body":[
+            "     No",
+            "'@ F $1",
+            "   AR DR SR RR SL TL KS ML DT",
+            "'@ 00 00 00 00 00 00 00 00 00",
+            "'@ 00 00 00 00 00 00 00 00 00",
+            "'@ 00 00 00 00 00 00 00 00 00",
+            "'@ 00 00 00 00 00 00 00 00 00",
+            "   AL FB",
+            "'@ 00 00"
+        ],
+        "description": "add FM instrument template"
+    },
+    "OPL Template":
+    {
+        "prefix": "'@ L",
+        "body":[
+            "     No",
+            "'@ L $1",
+            "   AR DR SL RR KL MT AM VB EG KR DT",
+            "'@ 00 00 00 00 00 00 00 00 00 00 00",
+            "'@ 00 00 00 00 00 00 00 00 00 00 00",
+            "   TL FB",
+            "'@ 00 00"
+        ],
+        "description": "add OPL instrument template"
+    },
+    "OPN Template":
+    {
+        "prefix": "'@ N",
+        "body":[
+            "     No",
+            "'@ N $1",
+            "   AR DR SR RR SL TL  KS ML DT AM SSGEG",
+            "'@ 00 00 00 00 00 000 00 00 00 00 00",
+            "'@ 00 00 00 00 00 000 00 00 00 00 00",
+            "'@ 00 00 00 00 00 000 00 00 00 00 00",
+            "'@ 00 00 00 00 00 000 00 00 00 00 00",
+            "   AL FB",
+            "'@ 00 00"
+        ],
+        "description": "add OPN instrument template"
+    },
+    "OPM Template":
+    {
+        "prefix": "'@ M",
+        "body":[
+            "     No",
+            "'@ M $1",
+            "   AR DR SR RR SL TL  KS ML DT1 DT2 AME",
+            "'@ 00 00 00 00 00 000 00 00 00  00  00",
+            "'@ 00 00 00 00 00 000 00 00 00  00  00",
+            "'@ 00 00 00 00 00 000 00 00 00  00  00",
+            "'@ 00 00 00 00 00 000 00 00 00  00  00",
+            "   AL FB",
+            "'@ 00 00"
+        ],
+        "description": "add OPM instrument template"
+    },
+    "PCM Template":
+    {
+        "prefix": "'@ P",
+        "body":[
+            "     No  , \"FileName\" , [BaseFreq] , Volume ( , [ChipName] , [Option] )",
+            "'@ P $1 , \"XXXX.wav\" ,       8000 ,    100"
+        ],
+        "description": "add PCM instrument template"
+    },
+    "PCM Template (Advanced1)":
+    {
+        "prefix": "'@ PD",
+        "body":[
+            "      \"FileName\" , ChipName , [SrcStartAdr] , [DesStartAdr] , [Length] , [Option]",
+            "'@ PD \"XXXX.wav\" ,     OPN2"
+        ],
+        "description": "add PCM instrument template"
+    },
+    "WAVETABLE Template":
+    {
+        "prefix": "'@ H",
+        "body":[
+            "     No",
+            "'@ H $1",
+            "     +0  +1  +2  +3  +4  +5  +6  +7",
+            "'@   000 000 000 000 000 000 000 000",
+            "'@   000 000 000 000 000 000 000 000",
+            "'@   000 000 000 000 000 000 000 000",
+            "'@   000 000 000 000 000 000 000 000"
+        ],
+        "description": "add WAVETABLE instrument template"
+    },
+    "ENVELOPE Template":
+    {
+        "prefix": "'@ E",
+        "body":[
+            "     No , SV , AR , DR , SL , SR , RR , ST , ChipName",
+            "'@ E $1, 000, 000, 000, 000, 000, 000, 000"
+        ],
+        "description": "add ENVELOPE instrument template"
+    },
+    "MUCOM88 Inport":
+    {
+        "prefix": "'@ MU",
+        "body":[
+            "'@ MUCOM88 0,\"$1"
+        ],
+        "description": "inport MUCOM88 instrument"
+    },
+    "MUCOM88 ADPCM Inport":
+    {
+        "prefix": "'@ MU",
+        "body":[
+            "'@ MUCOM88ADPCM $1"
+        ],
+        "description": "inport MUCOM88 ADPCM instrument"
+    },
+    "TFI Inport":
+    {
+        "prefix": "'@ T",
+        "body":[
+            "'@ TFI $1"
+        ],
+        "description": "inport TFI instrument"
+    },
+    "Tone Doubler Template":
+    {
+        "prefix": "'@ TD",
+        "body":[
+            "      No",
+            "'@ TD $1",
+            "   OP1ML OP2ML OP3ML OP4ML OP1DT2 OP2DT2 OP3DT2 OP4DT2 KeyShift"
+        ],
+        "description": "add Tone Doubler template"
+    }
+}

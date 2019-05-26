@@ -1,0 +1,178 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "mml2vgm",
+	"patterns": [
+		{
+			"include": "#mml-headers"
+		},
+		{
+			"include": "#mml-operators"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#others"
+		}
+	],
+	"repository": {
+		"mml-headers": {
+			"name": "string.headerblock.mml2vgm",
+			"begin": "'{",
+			"end": "}",
+			"patterns": [
+				{
+					"name": "keyword.songinfo.mml2vgm",
+					"match": "\\b(TitleName|TitleNameJ|GameName|GameNameJ|SystemName|SystemNameJ|Composer|ComposerJ|ReleaseDate|Converted|Notes)\\b"				
+				},
+				{
+					"name": "keyword.partdefine.mml2vgm",
+					"match": "\\b(ClockCount|PartYM2612|PartSN76489|PartRF5C164|PartYM2203|PartYM2608|PartYM2610B|PartYM2151|PartYM3526|PartSegaPCM|PartHuC6280|PartYM2612X|PartC140|PartAY8910|PartYM2413|PartK051649|PartYM2612Secondary|PartSN76489Secondary|PartRF5C164Secondary|PartYM2203Secondary|PartYM2608Secondary|PartYM2610BSecondary|PartYM2151Secondary|PartYM3526Secondary|PartSegaPCMSecondary|PartHuC6280Secondary|PartC140Secondary|PartAY8910Secondar|PartYM2413Secondary|PartK051649Secondary|PartPWM|PartOKIM6258|PartOKIM6295|PartPWMSecondary|PartOKIM6258Secondary|PartOKIM6295Secondary)\\b"
+				},
+				{
+					"name": "keyword.compilerdifine.mml2vgm",
+					"match": "\\b(Format|ClockCount|XGMBaseFrame|ForcedMonoPartYM2612|Octave-Rev|IsK052539|ModeBeforeSend)\\b"				
+				}
+				]},
+
+		"mml-operators": {
+			"patterns": [
+				{
+					"name": "storage.quoted.double.mml2vgm",
+					"begin": "\"",
+					"end": "\"\\s*\\d+??"
+				},
+				{
+					"name": "keyword.functions.mml2vgm",
+					"match": "^'@\\s(F|N|M|L|MUCOM88|MUCOM88ADPCM|TFI|P|PD|PI|H|TD|E)"
+				},
+				{
+					"name": "variable.functions.mml2vgm",
+					"begin": "^'%.{3}",
+					"end": ""
+				},
+				{
+					"name": "keyword.functions.mml2vgm",
+					"begin": "^'",
+					"end": "\\s"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "(@I|@E|@T|@N|@R|@A|l#)\\s*\\d+"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "[L|J]"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "V\\s*\\d+\\s*,\\s*\\d+\\s*"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "K\\s*[\\-\\+]?\\d+"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "S[PQRS]\\s*\\d+"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "A\\s*[\\+|\\-]\\d+"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "(EON|EOF|EHON|EHOF|EXON|EXOF|so|sf)"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "EXD\\s*[\\-\\+]?\\d+\\s*,\\s*[\\-\\+]?\\d+\\s*,\\s*[\\-\\+]?\\d+\\s*,\\s*[\\-\\+]?\\d+\\s*"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "M[PQRS][THV]\\s*[\\-\\+]?\\d+\\s*,?\\s*[\\-\\+]??\\d+?\\s*,?\\s*[\\-\\+]??\\d+?\\s*,?\\s*[\\-\\+]??\\d+?\\s*,?\\s*[\\-\\+]??\\d+?\\s*,?\\s*[\\-\\+]??\\d+?\\s*,?\\s*[\\-\\+]??\\d+?"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "(MAMS|MPMS|EHT|EN|EX)\\s*\\d+"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "(yFBAL|yPANFBAL|yPANFLCON|yPMSAMS)\\s*,\\s*\\d+"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "(y|yDTML|yTL|yKSAR|yAMDR|ySR|ySLRR|ySSG|yDTMLU|yDT1ML|yDT1MUL|yAMED1R|yDT2SR|yDT2D2R|yD1LRR|p)\\s*,\\s*\\d+\\s*,\\s*\\d+"
+				},
+				{
+					"name": "keyword.control.mml2vgm",
+					"match": "[@loDvV\\)\\(yqQwPmTAp]\\s*\\d+"
+				},
+				{
+					"name": "keyword.functions.mml2vgm",
+					"match": "\\%.{3}"
+				},
+				{
+					"name": "variable.language.mml2vgm",
+					"match": "r\\s*\\d+?"
+				},
+				{
+					"name": "variable.control.mml2vgm",
+					"match": "(\\[|\\{|\\<|\\>|\\.|\\+|\\-)"
+				},
+				{
+					"name": "variable.control.mml2vgm",
+					"match": "_([cdefgab]|o\\<\\>)"
+				},
+				{
+					"name": "variable.control.mml2vgm",
+					"match": "[cdefgab]\\s*&\\s*#?\\s*\\d?"
+				},
+				{
+					"name": "variable.control.mml2vgm",
+					"match": "[cdefgab]\\s*\\~\\s*#?\\s*\\d"
+				},
+				{
+					"name": "variable.control.mml2vgm",
+					"match": "[cdefgab]\\s*[,0]\\s*[cdefgab]"
+				},
+				{
+					"name": "variable.control.mml2vgm",
+					"match": "\\]\\s*\\d+?"
+				},
+				{
+					"name": "variable.control.mml2vgm",
+					"match": "\\}"
+				}
+			]
+		},
+		"comments":{
+			"patterns": [
+				{
+					"name": "invalid.part.mml2vgm",
+					"begin":"!",
+					"end": "\\n"
+				},
+				{
+					"name": "comment.line.mml2vgm",
+					"match":"^\\n"
+				},
+				{
+					"name": "comment.line.mml2vgm",
+					"begin": "^[^']",
+					"end": "\\n"
+			   }
+			]
+		},
+		"others":{
+			"patterns": [
+				{
+					"name": "string.comma.mml2vgm",
+					"match":","
+				}
+			]
+		}
+	},
+
+	"scopeName": "source.mml2vgm"
+}
